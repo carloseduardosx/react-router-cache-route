@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('prop-types'), require('react-router-dom')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'react', 'prop-types', 'react-router-dom'], factory) :
-  (factory((global.CacheRoute = {}),global.React,global.PropTypes,global.reactRouterDom));
-}(this, (function (exports,React,PropTypes,reactRouterDom) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-native'), require('prop-types'), require('react-router-dom')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-native', 'prop-types', 'react-router-dom'], factory) :
+  (factory((global.CacheRoute = {}),global.React,global.reactNative,global.PropTypes,global.reactRouterDom));
+}(this, (function (exports,React,reactNative,PropTypes,reactRouterDom) { 'use strict';
 
   var React__default = 'default' in React ? React['default'] : React;
   PropTypes = PropTypes && PropTypes.hasOwnProperty('default') ? PropTypes['default'] : PropTypes;
@@ -660,7 +660,7 @@
         var hasClassName = className !== '';
 
         return cached ? React__default.createElement(
-          'div',
+          reactNative.View,
           _extends({
             className: hasClassName ? className : undefined
           }, behaviorProps, {

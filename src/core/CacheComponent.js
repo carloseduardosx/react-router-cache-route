@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { View } from 'react-native';
 import PropTypes from 'prop-types'
 
 import {
@@ -297,7 +298,7 @@ export default class CacheComponent extends Component {
     const hasClassName = className !== ''
 
     return cached ? (
-      <div
+      <View
         className={hasClassName ? className : undefined}
         {...behaviorProps}
         ref={wrapper => {
@@ -305,7 +306,7 @@ export default class CacheComponent extends Component {
         }}
       >
         {run(children, undefined, this.cacheLifecycles)}
-      </div>
+      </View>
     ) : null
   }
 }
